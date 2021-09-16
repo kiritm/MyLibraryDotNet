@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json;
 
 namespace MyLibraryDotNet472.Models
 {
@@ -71,5 +72,14 @@ namespace MyLibraryDotNet472.Models
         //Navigation property       
         public  BFormat BFormat { get; set; }
         public virtual BCategory BCategory { get; set; }
+
+        ////create Object
+        //public override string ToString() 
+        //{
+        //   return JsonSerializer.Serialize<Book>(this);
+        //}
+
+        ////create Object
+        public override string ToString() => JsonSerializer.Serialize<Book>(this);
     }
 }

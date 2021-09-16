@@ -26,3 +26,7 @@ web.Config add
         <databaseInitializer type="MyLibraryDotNet472.Context.BookInitializer, MyLibraryDotNet472" />
       </context>
  </contexts>
+
+for json package at older core (System.Text.Json 5.0.2)
+use
+PM> Install-Package System.Text.Json -Version 5.0.2
